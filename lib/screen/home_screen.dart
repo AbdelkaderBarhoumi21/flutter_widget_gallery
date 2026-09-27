@@ -7,26 +7,26 @@ class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
   @override
   Widget build(BuildContext context) => Scaffold(
-    appBar: AppBar(title: Text("Widget Catalog Screen")),
+    appBar: AppBar(
+      title: Text("Widget Catalog Screen"),
+      actions: [IconButton(onPressed: () {}, icon: Icon(Icons.search))],
+    ),
     body: Padding(
       padding: const EdgeInsets.all(16.0),
-      child: ListView(
-        children: [
-          CatalogSectionTitle(title: 'Stepper widget'),
-          SizedBox(height: 16),
-          StepperWidget(),
-          SizedBox(height: 16),
-          CatalogSectionTitle(title: 'FittedBox widget'),
-          SizedBox(height: 16),
-          Text("Without fitted box"),
-          SizedBox(height: 16),
-
-          FittedBoxWidget(withFittedBox: false),
-          SizedBox(height: 16),
-          Text("Without fitted box"),
-          SizedBox(height: 16),
-          FittedBoxWidget(withFittedBox: true),
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          spacing: 16,
+          children: [
+            CatalogSectionTitle(title: 'Stepper widget'),
+            StepperWidget(),
+            CatalogSectionTitle(title: 'FittedBox widget'),
+            Text("Without fitted box"),
+            FittedBoxWidget(withFittedBox: false),
+            Text("Without fitted box"),
+            FittedBoxWidget(withFittedBox: true),
+          ],
+        ),
       ),
     ),
   );
