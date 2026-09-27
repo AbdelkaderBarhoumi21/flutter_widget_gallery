@@ -8,13 +8,17 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
     appBar: AppBar(
-      title: Text("Widget Catalog Screen"),
+      title: Text(
+        "Widget Catalog Screen",
+        style: TextStyle(color: Colors.white),
+      ),
+      backgroundColor: Colors.blue,
       actions: [
         IconButton(
           onPressed: () {
             showSearch(context: context, delegate: CustomSearchDelegate());
           },
-          icon: Icon(Icons.search),
+          icon: Icon(Icons.search, color: Colors.white),
         ),
       ],
     ),
