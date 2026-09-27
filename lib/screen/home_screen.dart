@@ -9,7 +9,14 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) => Scaffold(
     appBar: AppBar(
       title: Text("Widget Catalog Screen"),
-      actions: [IconButton(onPressed: () {}, icon: Icon(Icons.search))],
+      actions: [
+        IconButton(
+          onPressed: () {
+            showSearch(context: context, delegate: CustomSearchDelegate());
+          },
+          icon: Icon(Icons.search),
+        ),
+      ],
     ),
     body: Padding(
       padding: const EdgeInsets.all(16.0),
@@ -30,4 +37,54 @@ class HomeScreen extends StatelessWidget {
       ),
     ),
   );
+}
+
+class CustomSearchDelegate extends SearchDelegate {
+  final List<String> widgetNames = [
+    'Stepper widget',
+    'FittedBox widget',
+    'ListView widget',
+    'Container widget',
+  ];
+  @override
+  List<Widget>? buildActions(BuildContext context) {
+    // Top-right: a clear button, only shown if there's text
+    // query = '' =>  clears the text field, retriggers buildSuggestions
+    return [
+      if (query.isNotEmpty)
+        IconButton(onPressed: () => query = '', icon: Icon(Icons.clear)),
+    ];
+  }
+
+  @override
+  Widget? buildLeading(BuildContext context) {
+    return IconButton(
+      onPressed: () => close(context, null),
+      icon: Icon(Icons.arrow_back_ios),
+    );
+  }
+
+  @override
+  Widget buildResults(BuildContext context) {
+    // Shown after the user submits (presses enter/search)
+    return Center(child: Text('Showing results for: "$query"'));
+  }
+
+  @override
+  Widget buildSuggestions(BuildContext context) {
+    final suggestions = widgetNames
+        .where((name) => name.toLowerCase().contains(query.toLowerCase()))
+        .toList();
+
+    return ListView.builder(
+      itemCount: suggestions.length,
+      itemBuilder: (context, index) => ListTile(
+        title: Text(suggestions[index]),
+        onTap: () {
+          query = suggestions[index]; // fills the search field
+          showResults(context); // manually trigger buildResults
+        },
+      ),
+    );
+  }
 }
