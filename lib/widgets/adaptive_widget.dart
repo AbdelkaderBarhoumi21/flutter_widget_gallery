@@ -40,6 +40,7 @@ class _AdaptiveWidgetState extends State<AdaptiveWidget> {
           Switch.adaptive(value: true, onChanged: (bool newValue) {}),
           Icon(Icons.adaptive.share),
           const CircularProgressIndicator.adaptive(),
+          SizedBox(height: 16),
         ],
       ),
     );

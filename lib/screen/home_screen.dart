@@ -4,6 +4,7 @@ import 'package:flutter_widget_gallery/widgets/catalog_section_title.dart';
 import 'package:flutter_widget_gallery/widgets/fitted_box_widget.dart';
 import 'package:flutter_widget_gallery/widgets/hero_widget.dart';
 import 'package:flutter_widget_gallery/widgets/stepper_widget.dart';
+import 'package:flutter_widget_gallery/widgets/stream_builder_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -36,11 +37,12 @@ class HomeScreen extends StatelessWidget {
             CatalogSectionTitle(title: 'FittedBox widget'),
             Text("Without fitted box"),
             FittedBoxWidget(withFittedBox: false),
-            Text("Without fitted box"),
+            Text("With fitted box"),
             FittedBoxWidget(withFittedBox: true),
             CatalogSectionTitle(title: 'Adaptive widget'),
             AdaptiveWidget(),
             HeroWidget(),
+            StreamBuilderWidget(),
           ],
         ),
       ),
