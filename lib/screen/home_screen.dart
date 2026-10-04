@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widget_gallery/screen/sliver_screen.dart';
 import 'package:flutter_widget_gallery/widgets/adaptive_widget.dart';
 import 'package:flutter_widget_gallery/widgets/catalog_section_title.dart';
+import 'package:flutter_widget_gallery/widgets/choice_chip_widget.dart';
 import 'package:flutter_widget_gallery/widgets/fitted_box_widget.dart';
 import 'package:flutter_widget_gallery/widgets/hero_widget.dart';
 import 'package:flutter_widget_gallery/widgets/stepper_widget.dart';
@@ -41,8 +43,22 @@ class HomeScreen extends StatelessWidget {
             FittedBoxWidget(withFittedBox: true),
             CatalogSectionTitle(title: 'Adaptive widget'),
             AdaptiveWidget(),
+            CatalogSectionTitle(title: "Hero Widget"),
             HeroWidget(),
+            CatalogSectionTitle(title: "StreamBuilder Widget"),
             StreamBuilderWidget(),
+            CatalogSectionTitle(title: "ChoiceChip Widget"),
+            ChoiceChipWidget(),
+            CatalogSectionTitle(title: "SLiver Widget"),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => SliverScreen()),
+                );
+              },
+              child: Text("Go to Sliver Screen"),
+            ),
           ],
         ),
       ),
