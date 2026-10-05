@@ -5,6 +5,7 @@ import 'package:flutter_widget_gallery/widgets/animated_cross_fade_widget.dart';
 import 'package:flutter_widget_gallery/widgets/bottom_navigation_bar_widget.dart';
 import 'package:flutter_widget_gallery/widgets/catalog_section_title.dart';
 import 'package:flutter_widget_gallery/widgets/choice_chip_widget.dart';
+import 'package:flutter_widget_gallery/widgets/expanded_widget.dart';
 import 'package:flutter_widget_gallery/widgets/expansion_tile_widget.dart';
 import 'package:flutter_widget_gallery/widgets/fitted_box_widget.dart';
 import 'package:flutter_widget_gallery/widgets/hero_widget.dart';
@@ -129,6 +130,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
             CatalogSectionTitle(title: 'Cross fade widget'),
             AnimatedCrossFadeWidget(),
+            CatalogSectionTitle(title: 'Expanded widget'),
+            SizedBox(height: 200, child: ExpandedWidget()),
           ],
         ),
       ),
