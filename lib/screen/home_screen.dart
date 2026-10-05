@@ -7,6 +7,7 @@ import 'package:flutter_widget_gallery/widgets/choice_chip_widget.dart';
 import 'package:flutter_widget_gallery/widgets/expansion_tile_widget.dart';
 import 'package:flutter_widget_gallery/widgets/fitted_box_widget.dart';
 import 'package:flutter_widget_gallery/widgets/hero_widget.dart';
+import 'package:flutter_widget_gallery/widgets/page_view_widget.dart';
 import 'package:flutter_widget_gallery/widgets/range_slider_widget.dart';
 import 'package:flutter_widget_gallery/widgets/show_date_picker_widget.dart';
 import 'package:flutter_widget_gallery/widgets/show_time_picker_widget.dart';
@@ -97,7 +98,8 @@ class _HomeScreenState extends State<HomeScreen> {
             RangeSliderWidget(),
             CatalogSectionTitle(title: 'Visibility  widget'),
             VisibilityWidget(),
-            CatalogSectionTitle(title: 'Bottom navigation  widget'),
+            CatalogSectionTitle(title: 'Page view widget'),
+            SizedBox(height: 200, child: PageViewWidget()),
           ],
         ),
       ),
