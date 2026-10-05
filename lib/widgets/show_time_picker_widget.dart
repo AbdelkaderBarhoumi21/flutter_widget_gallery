@@ -19,7 +19,7 @@ class _ShowTimePickerWidgetState extends State<ShowTimePickerWidget> {
             '${_time!.hour.toString()} : ${_time!.minute.toString()}',
             style: TextStyle(fontSize: 60),
           ),
-          IconButton(
+          ElevatedButton(
             onPressed: () async {
               TimeOfDay? newTime = await showTimePicker(
                 context: context,
@@ -31,7 +31,7 @@ class _ShowTimePickerWidgetState extends State<ShowTimePickerWidget> {
                 });
               }
             },
-            icon: Icon(Icons.access_time),
+            child: Text("Choose a time"),
           ),
         ],
       ),
