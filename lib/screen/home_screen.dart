@@ -11,15 +11,22 @@ import 'package:flutter_widget_gallery/widgets/show_time_picker_widget.dart';
 import 'package:flutter_widget_gallery/widgets/stepper_widget.dart';
 import 'package:flutter_widget_gallery/widgets/stream_builder_widget.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  String title = "Widget Catalog Screen";
+  String appBarTitle = "Widget Catalog Screen 2";
+  String apBarSecondTitle = "Widget Catalog Screen 3";
+
   @override
   Widget build(BuildContext context) => Scaffold(
     appBar: AppBar(
-      title: Text(
-        "Widget Catalog Screen",
-        style: TextStyle(color: Colors.white),
-      ),
+      title: Text(title, style: TextStyle(color: Colors.white)),
       backgroundColor: Colors.blue,
       actions: [
         IconButton(
@@ -27,6 +34,20 @@ class HomeScreen extends StatelessWidget {
             showSearch(context: context, delegate: CustomSearchDelegate());
           },
           icon: Icon(Icons.search, color: Colors.white),
+        ),
+        PopupMenuButton(
+          itemBuilder: (context) => [
+            PopupMenuItem(value: appBarTitle, child: Text(appBarTitle)),
+            PopupMenuItem(
+              value: apBarSecondTitle,
+              child: Text(apBarSecondTitle),
+            ),
+          ],
+          onSelected: (String newValue) {
+            setState(() {
+              title = newValue;
+            });
+          },
         ),
       ],
     ),
