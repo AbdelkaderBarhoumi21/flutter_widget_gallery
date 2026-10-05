@@ -10,6 +10,7 @@ import 'package:flutter_widget_gallery/widgets/expansion_tile_widget.dart';
 import 'package:flutter_widget_gallery/widgets/fitted_box_widget.dart';
 import 'package:flutter_widget_gallery/widgets/flexible_widget.dart';
 import 'package:flutter_widget_gallery/widgets/future_builder_widget.dart';
+import 'package:flutter_widget_gallery/widgets/grid_paper_widget.dart';
 import 'package:flutter_widget_gallery/widgets/hero_widget.dart';
 import 'package:flutter_widget_gallery/widgets/page_view_widget.dart';
 import 'package:flutter_widget_gallery/widgets/range_slider_widget.dart';
@@ -139,6 +140,8 @@ class _HomeScreenState extends State<HomeScreen> {
               FlexibleWidget(),
               CatalogSectionTitle(title: 'Future builder widget'),
               FutureBuilderWidget(),
+              CatalogSectionTitle(title: 'Grid paper widget'),
+              GridPaperWidget(),
             ],
           ),
         ),
