@@ -11,6 +11,7 @@ import 'package:flutter_widget_gallery/widgets/show_date_picker_widget.dart';
 import 'package:flutter_widget_gallery/widgets/show_time_picker_widget.dart';
 import 'package:flutter_widget_gallery/widgets/stepper_widget.dart';
 import 'package:flutter_widget_gallery/widgets/stream_builder_widget.dart';
+import 'package:flutter_widget_gallery/widgets/visibility_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -92,6 +93,8 @@ class _HomeScreenState extends State<HomeScreen> {
             ShowDatePickerWidget(),
             CatalogSectionTitle(title: 'Range slider widget'),
             RangeSliderWidget(),
+            CatalogSectionTitle(title: 'Visibility  widget'),
+            VisibilityWidget(),
           ],
         ),
       ),
