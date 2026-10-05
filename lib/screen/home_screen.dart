@@ -100,6 +100,31 @@ class _HomeScreenState extends State<HomeScreen> {
             VisibilityWidget(),
             CatalogSectionTitle(title: 'Page view widget'),
             SizedBox(height: 200, child: PageViewWidget()),
+            CatalogSectionTitle(title: 'Bottom widget'),
+            ElevatedButton(
+              onPressed: () {
+                showModalBottomSheet(
+                  context: context,
+                  builder: (context) {
+                    return SizedBox(
+                      height: 200,
+                      child: Center(
+                        child: TextButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          child: Text(
+                            'Close',
+                            style: TextStyle(color: Colors.blue),
+                          ),
+                        ),
+                      ),
+                    );
+                  },
+                );
+              },
+              child: Text('Show bottom sheet'),
+            ),
           ],
         ),
       ),
