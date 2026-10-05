@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_gallery/screen/sliver_screen.dart';
 import 'package:flutter_widget_gallery/widgets/adaptive_widget.dart';
+import 'package:flutter_widget_gallery/widgets/animated_cross_fade_widget.dart';
 import 'package:flutter_widget_gallery/widgets/bottom_navigation_bar_widget.dart';
 import 'package:flutter_widget_gallery/widgets/catalog_section_title.dart';
 import 'package:flutter_widget_gallery/widgets/choice_chip_widget.dart';
@@ -125,6 +126,9 @@ class _HomeScreenState extends State<HomeScreen> {
               },
               child: Text('Show bottom sheet'),
             ),
+
+            CatalogSectionTitle(title: 'Cross fade widget'),
+            AnimatedCrossFadeWidget(),
           ],
         ),
       ),
