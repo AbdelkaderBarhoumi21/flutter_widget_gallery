@@ -24,6 +24,14 @@ class _HomeScreenState extends State<HomeScreen> {
   String title = "Widget Catalog Screen";
   String appBarTitle = "Widget Catalog Screen 2";
   String apBarSecondTitle = "Widget Catalog Screen 3";
+  int _currentIndex = 0;
+
+  List<Widget> body = const [
+    Icon(Icons.home),
+    Icon(Icons.menu),
+    Icon(Icons.person),
+    Icon(Icons.settings),
+  ];
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -51,6 +59,21 @@ class _HomeScreenState extends State<HomeScreen> {
             });
           },
         ),
+      ],
+    ),
+    bottomNavigationBar: BottomNavigationBar(
+      selectedItemColor: Colors.blue,
+      currentIndex: _currentIndex,
+      onTap: (int index) {
+        setState(() {
+          _currentIndex = index;
+        });
+      },
+      items: const [
+        BottomNavigationBarItem(label: 'Home', icon: Icon(Icons.home)),
+        BottomNavigationBarItem(label: 'Menu', icon: Icon(Icons.menu)),
+        BottomNavigationBarItem(label: 'Person', icon: Icon(Icons.person)),
+        BottomNavigationBarItem(label: 'Settings', icon: Icon(Icons.settings)),
       ],
     ),
     body: Padding(
@@ -95,6 +118,8 @@ class _HomeScreenState extends State<HomeScreen> {
             RangeSliderWidget(),
             CatalogSectionTitle(title: 'Visibility  widget'),
             VisibilityWidget(),
+            CatalogSectionTitle(title: 'Bottom navigation  widget'),
+            Center(child: body[_currentIndex]),
           ],
         ),
       ),
