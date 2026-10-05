@@ -8,6 +8,7 @@ import 'package:flutter_widget_gallery/widgets/choice_chip_widget.dart';
 import 'package:flutter_widget_gallery/widgets/expanded_widget.dart';
 import 'package:flutter_widget_gallery/widgets/expansion_tile_widget.dart';
 import 'package:flutter_widget_gallery/widgets/fitted_box_widget.dart';
+import 'package:flutter_widget_gallery/widgets/flexible_widget.dart';
 import 'package:flutter_widget_gallery/widgets/hero_widget.dart';
 import 'package:flutter_widget_gallery/widgets/page_view_widget.dart';
 import 'package:flutter_widget_gallery/widgets/range_slider_widget.dart';
@@ -132,6 +133,8 @@ class _HomeScreenState extends State<HomeScreen> {
             AnimatedCrossFadeWidget(),
             CatalogSectionTitle(title: 'Expanded widget'),
             SizedBox(height: 200, child: ExpandedWidget()),
+            CatalogSectionTitle(title: 'Flexible widget'),
+            FlexibleWidget(),
           ],
         ),
       ),
