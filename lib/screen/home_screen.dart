@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_gallery/screen/sliver_screen.dart';
 import 'package:flutter_widget_gallery/widgets/adaptive_widget.dart';
+import 'package:flutter_widget_gallery/widgets/bottom_navigation_bar_widget.dart';
 import 'package:flutter_widget_gallery/widgets/catalog_section_title.dart';
 import 'package:flutter_widget_gallery/widgets/choice_chip_widget.dart';
 import 'package:flutter_widget_gallery/widgets/expansion_tile_widget.dart';
@@ -24,14 +25,6 @@ class _HomeScreenState extends State<HomeScreen> {
   String title = "Widget Catalog Screen";
   String appBarTitle = "Widget Catalog Screen 2";
   String apBarSecondTitle = "Widget Catalog Screen 3";
-  int _currentIndex = 0;
-
-  List<Widget> body = const [
-    Icon(Icons.home),
-    Icon(Icons.menu),
-    Icon(Icons.person),
-    Icon(Icons.settings),
-  ];
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -61,21 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ],
     ),
-    bottomNavigationBar: BottomNavigationBar(
-      selectedItemColor: Colors.blue,
-      currentIndex: _currentIndex,
-      onTap: (int index) {
-        setState(() {
-          _currentIndex = index;
-        });
-      },
-      items: const [
-        BottomNavigationBarItem(label: 'Home', icon: Icon(Icons.home)),
-        BottomNavigationBarItem(label: 'Menu', icon: Icon(Icons.menu)),
-        BottomNavigationBarItem(label: 'Person', icon: Icon(Icons.person)),
-        BottomNavigationBarItem(label: 'Settings', icon: Icon(Icons.settings)),
-      ],
-    ),
+    bottomNavigationBar: BottomNavigationBarWidget(),
     body: Padding(
       padding: const EdgeInsets.all(16.0),
       child: SingleChildScrollView(
@@ -119,7 +98,6 @@ class _HomeScreenState extends State<HomeScreen> {
             CatalogSectionTitle(title: 'Visibility  widget'),
             VisibilityWidget(),
             CatalogSectionTitle(title: 'Bottom navigation  widget'),
-            Center(child: body[_currentIndex]),
           ],
         ),
       ),
