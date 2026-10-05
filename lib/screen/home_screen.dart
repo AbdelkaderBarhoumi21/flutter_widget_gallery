@@ -6,6 +6,7 @@ import 'package:flutter_widget_gallery/widgets/choice_chip_widget.dart';
 import 'package:flutter_widget_gallery/widgets/expansion_tile_widget.dart';
 import 'package:flutter_widget_gallery/widgets/fitted_box_widget.dart';
 import 'package:flutter_widget_gallery/widgets/hero_widget.dart';
+import 'package:flutter_widget_gallery/widgets/show_date_picker_widget.dart';
 import 'package:flutter_widget_gallery/widgets/show_time_picker_widget.dart';
 import 'package:flutter_widget_gallery/widgets/stepper_widget.dart';
 import 'package:flutter_widget_gallery/widgets/stream_builder_widget.dart';
@@ -65,6 +66,8 @@ class HomeScreen extends StatelessWidget {
             ExpansionTileWidget(),
             CatalogSectionTitle(title: "Show Time Picker widget"),
             ShowTimePickerWidget(),
+            CatalogSectionTitle(title: 'Show Date Picker widget'),
+            ShowDatePickerWidget(),
           ],
         ),
       ),
