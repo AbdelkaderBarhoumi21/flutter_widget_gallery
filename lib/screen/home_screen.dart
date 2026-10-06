@@ -151,6 +151,28 @@ class _HomeScreenState extends State<HomeScreen> {
               SpreadOperatorWidget(),
               CatalogSectionTitle(title: 'Stack widget'),
               StackWidget(),
+              CatalogSectionTitle(title: "App dialog widget"),
+              ElevatedButton(
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                      title: const Text('Alert dialog title'),
+                      contentPadding: EdgeInsets.all(20),
+                      content: const Text('This is the alert dialog'),
+                      actions: [
+                        TextButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          child: Text('Close'),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+                child: Text('Show dialog'),
+              ),
             ],
           ),
         ),
