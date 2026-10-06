@@ -17,6 +17,7 @@ import 'package:flutter_widget_gallery/widgets/range_slider_widget.dart';
 import 'package:flutter_widget_gallery/widgets/show_date_picker_widget.dart';
 import 'package:flutter_widget_gallery/widgets/show_time_picker_widget.dart';
 import 'package:flutter_widget_gallery/widgets/spread_operator_widget.dart';
+import 'package:flutter_widget_gallery/widgets/stack_widget.dart';
 import 'package:flutter_widget_gallery/widgets/stepper_widget.dart';
 import 'package:flutter_widget_gallery/widgets/stream_builder_widget.dart';
 import 'package:flutter_widget_gallery/widgets/tool_tip_widget.dart';
@@ -148,6 +149,8 @@ class _HomeScreenState extends State<HomeScreen> {
               ToolTipWidget(),
               CatalogSectionTitle(title: 'Spread operator widget'),
               SpreadOperatorWidget(),
+              CatalogSectionTitle(title: 'Stack widget'),
+              StackWidget(),
             ],
           ),
         ),
