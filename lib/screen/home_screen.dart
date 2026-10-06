@@ -20,6 +20,7 @@ import 'package:flutter_widget_gallery/widgets/spread_operator_widget.dart';
 import 'package:flutter_widget_gallery/widgets/stack_widget.dart';
 import 'package:flutter_widget_gallery/widgets/stepper_widget.dart';
 import 'package:flutter_widget_gallery/widgets/stream_builder_widget.dart';
+import 'package:flutter_widget_gallery/widgets/table_row_widget.dart';
 import 'package:flutter_widget_gallery/widgets/tool_tip_widget.dart';
 import 'package:flutter_widget_gallery/widgets/visibility_widget.dart';
 
@@ -173,6 +174,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
                 child: Text('Show dialog'),
               ),
+              CatalogSectionTitle(title: 'Table row widget'),
+              TableRowWidget()
             ],
           ),
         ),
