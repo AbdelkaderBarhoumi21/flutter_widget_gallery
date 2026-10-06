@@ -12,6 +12,7 @@ import 'package:flutter_widget_gallery/widgets/flexible_widget.dart';
 import 'package:flutter_widget_gallery/widgets/future_builder_widget.dart';
 import 'package:flutter_widget_gallery/widgets/grid_paper_widget.dart';
 import 'package:flutter_widget_gallery/widgets/hero_widget.dart';
+import 'package:flutter_widget_gallery/widgets/interactive_viewer_widget.dart';
 import 'package:flutter_widget_gallery/widgets/page_view_widget.dart';
 import 'package:flutter_widget_gallery/widgets/range_slider_widget.dart';
 import 'package:flutter_widget_gallery/widgets/show_date_picker_widget.dart';
@@ -175,7 +176,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Text('Show dialog'),
               ),
               CatalogSectionTitle(title: 'Table row widget'),
-              TableRowWidget()
+              TableRowWidget(),
+              CatalogSectionTitle(title: 'Interactive view widget'),
+              InteractiveViewerWidget(),
             ],
           ),
         ),
