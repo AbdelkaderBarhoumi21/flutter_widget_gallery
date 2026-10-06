@@ -4,6 +4,7 @@ import 'package:flutter_widget_gallery/widgets/adaptive_widget.dart';
 import 'package:flutter_widget_gallery/widgets/animated_cross_fade_widget.dart';
 import 'package:flutter_widget_gallery/widgets/bottom_navigation_bar_widget.dart';
 import 'package:flutter_widget_gallery/widgets/catalog_section_title.dart';
+import 'package:flutter_widget_gallery/widgets/checkbox_tile_widget.dart';
 import 'package:flutter_widget_gallery/widgets/choice_chip_widget.dart';
 import 'package:flutter_widget_gallery/widgets/expanded_widget.dart';
 import 'package:flutter_widget_gallery/widgets/expansion_tile_widget.dart';
@@ -179,6 +180,8 @@ class _HomeScreenState extends State<HomeScreen> {
               TableRowWidget(),
               CatalogSectionTitle(title: 'Interactive view widget'),
               InteractiveViewerWidget(),
+              CatalogSectionTitle(title: 'Check box tile widget'),
+              CheckBoxTileWidget(),
             ],
           ),
         ),
