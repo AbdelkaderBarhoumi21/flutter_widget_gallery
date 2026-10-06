@@ -16,6 +16,7 @@ import 'package:flutter_widget_gallery/widgets/hero_widget.dart';
 import 'package:flutter_widget_gallery/widgets/interactive_viewer_widget.dart';
 import 'package:flutter_widget_gallery/widgets/page_view_widget.dart';
 import 'package:flutter_widget_gallery/widgets/range_slider_widget.dart';
+import 'package:flutter_widget_gallery/widgets/selectable_text_widget.dart';
 import 'package:flutter_widget_gallery/widgets/show_date_picker_widget.dart';
 import 'package:flutter_widget_gallery/widgets/show_time_picker_widget.dart';
 import 'package:flutter_widget_gallery/widgets/spread_operator_widget.dart';
@@ -182,6 +183,8 @@ class _HomeScreenState extends State<HomeScreen> {
               InteractiveViewerWidget(),
               CatalogSectionTitle(title: 'Check box tile widget'),
               CheckBoxTileWidget(),
+              CatalogSectionTitle(title: 'Selectable text widget'),
+              SelectableTextWidget()
             ],
           ),
         ),
